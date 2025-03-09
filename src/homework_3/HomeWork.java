@@ -53,6 +53,7 @@ public class HomeWork {
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter a number to check its parity: ");
         int number = input.nextInt();
+
         if (number % 2 == 0){
             System.out.println(number + " - even number");
         } else {
@@ -63,7 +64,9 @@ public class HomeWork {
     public static void getWeather(){
         Scanner input = new Scanner(System.in);
         System.out.print("Введите значение температуры: ");
+
         int number = input.nextInt();
+
         if (number > -5){
             System.out.println("Тепло");
         } else if (number > -20){
@@ -75,7 +78,9 @@ public class HomeWork {
     public static void getColorRainbow(){
         Scanner input = new Scanner(System.in);
         System.out.print("Please, enter a number to get color of Rainbow: ");
+
         int number = input.nextInt();
+
         switch (number){
             case 1:
                 System.out.println(number + " - Red color!");
@@ -121,8 +126,8 @@ public class HomeWork {
     public static void getSumOfNumbers(){
         Scanner input = new Scanner(System.in);
         System.out.print("Please, enter positive number for get sum of numbers: ");
-        int number = input.nextInt();
 
+        int number = input.nextInt();
         int sum = 0;
 
         for (int num = 1; num <= number; num++){
@@ -134,6 +139,7 @@ public class HomeWork {
     }
 
     public static void getSequenceNumbers(){
+
         int num = 0;
 
         while (num + 7 <= 100){
@@ -143,6 +149,7 @@ public class HomeWork {
     }
 
     public static void getNegativeSequenceNumbers(){
+
         int num = 0;
         int count = 0;
 
