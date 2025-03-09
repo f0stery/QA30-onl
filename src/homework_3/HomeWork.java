@@ -12,7 +12,9 @@ public class HomeWork {
     public static void getNameSeasonSwitch(){
         Scanner input = new Scanner(System.in);
         System.out.print("Please, enter the month number to find out the season: ");
+
         int month = input.nextInt();
+
         switch (month) {
             case 1, 2, 12:
                 System.out.println("It's Winter!");
@@ -34,6 +36,7 @@ public class HomeWork {
     public static void getNameSeasonIfElse(){
         Scanner input = new Scanner(System.in);
         System.out.print("Please, enter the month number to find out the season: ");
+
         int month = input.nextInt();
 
         if (month <= 2 && month > 0 || month == 12){
@@ -52,6 +55,7 @@ public class HomeWork {
     public static void checkParity(){
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter a number to check its parity: ");
+
         int number = input.nextInt();
 
         if (number % 2 == 0){
