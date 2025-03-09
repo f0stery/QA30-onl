@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        checkParity();
+        getWeather();
     }
 
     public static void getNameSeasonSwitch(){
@@ -59,4 +59,16 @@ public class HomeWork {
         }
     }
 
+    public static void getWeather(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Введите значение температуры: ");
+        int number = input.nextInt();
+        if (number > -5){
+            System.out.println("Тепло");
+        } else if (number > -20){
+            System.out.println("Нормально");
+        } else {
+            System.out.println("Холодно");
+        }
+    }
 }
