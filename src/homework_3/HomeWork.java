@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getNotEvenNumbers();
+        getNumberDecrement();
     }
 
     public static void getNameSeasonSwitch(){
@@ -107,6 +107,12 @@ public class HomeWork {
             if (num % 2 == 0){
                 continue;
             }
+            System.out.print(" " + num);
+        }
+    }
+
+    public static void getNumberDecrement(){
+        for (int num = 5; num >= 1; num--){
             System.out.print(" " + num);
         }
     }
