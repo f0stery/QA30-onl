@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getSumOfNumbers();
+        getSequenceNumbers();
     }
 
     public static void getNameSeasonSwitch(){
@@ -130,5 +130,14 @@ public class HomeWork {
         }
 
         System.out.println("Sum of numbers = " + sum);
+    }
+
+    public static void getSequenceNumbers(){
+        int num = 0;
+
+        while (num + 7 <= 100){
+            num += 7;
+            System.out.print(num + " ");
+        }
     }
 }
