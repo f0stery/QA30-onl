@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getColorRainbow();
+        getNotEvenNumbers();
     }
 
     public static void getNameSeasonSwitch(){
@@ -100,6 +100,14 @@ public class HomeWork {
             default:
                 System.out.println("Out of colors");
         }
+    }
 
+    public static void getNotEvenNumbers(){
+        for (int num = 1; num <= 99; num++){
+            if (num % 2 == 0){
+                continue;
+            }
+            System.out.print(" " + num);
+        }
     }
 }
