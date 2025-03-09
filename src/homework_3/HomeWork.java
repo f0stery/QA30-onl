@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getSequenceNumbers();
+        getNegativeSequenceNumbers();
     }
 
     public static void getNameSeasonSwitch(){
@@ -138,6 +138,17 @@ public class HomeWork {
         while (num + 7 <= 100){
             num += 7;
             System.out.print(num + " ");
+        }
+    }
+
+    public static void getNegativeSequenceNumbers(){
+        int num = 0;
+        int count = 0;
+
+        while (count < 10){
+            System.out.print(num + " ");
+            num -= 5;
+            count += 1;
         }
     }
 }
