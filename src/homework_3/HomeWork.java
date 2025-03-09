@@ -2,10 +2,11 @@ package homework_3;
 
 import java.util.Scanner;
 
+
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getNegativeSequenceNumbers();
+        getSquareNumbers();
     }
 
     public static void getNameSeasonSwitch(){
@@ -149,6 +150,13 @@ public class HomeWork {
             System.out.print(num + " ");
             num -= 5;
             count += 1;
+        }
+    }
+
+    public static void getSquareNumbers(){
+
+        for (int num = 10; num <= 20; num++){
+            System.out.print(num * num + " ");
         }
     }
 }
