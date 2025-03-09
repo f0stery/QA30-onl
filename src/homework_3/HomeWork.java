@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getNameSeasonIfElse();
+        checkParity();
     }
 
     public static void getNameSeasonSwitch(){
@@ -45,6 +45,17 @@ public class HomeWork {
             System.out.println("It's Fall!");
         } else {
             System.out.println("There is no such month in a year");
+        }
+    }
+
+    public static void checkParity(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter a number to check its parity: ");
+        int number = input.nextInt();
+        if (number % 2 == 0){
+            System.out.println(number + " - even number");
+        } else {
+            System.out.println(number + " not even number");
         }
     }
 
