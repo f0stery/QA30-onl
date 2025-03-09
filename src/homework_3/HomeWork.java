@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getWeather();
+        getColorRainbow();
     }
 
     public static void getNameSeasonSwitch(){
@@ -70,5 +70,36 @@ public class HomeWork {
         } else {
             System.out.println("Холодно");
         }
+    }
+    public static void getColorRainbow(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please, enter a number to get color of Rainbow: ");
+        int number = input.nextInt();
+        switch (number){
+            case 1:
+                System.out.println(number + " - Red color!");
+                break;
+            case 2:
+                System.out.println(number + " - Orange color!");
+                break;
+            case 3:
+                System.out.println(number + " - Yellow color!");
+                break;
+            case 4:
+                System.out.println(number + " - Green color!");
+                break;
+            case 5:
+                System.out.println(number + " - Blue color!");
+                break;
+            case 6:
+                System.out.println(number + " - Indigo color!");
+                break;
+            case 7:
+                System.out.println(number + " - Violet color!");
+                break;
+            default:
+                System.out.println("Out of colors");
+        }
+
     }
 }
