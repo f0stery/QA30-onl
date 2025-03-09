@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getSumPercent();
+        getMultiplicationTable();
     }
 
     public static void getNameSeasonSwitch(){
@@ -203,6 +203,18 @@ public class HomeWork {
             System.out.println("Your sum for " + months + " months = " + finalSum);
         } else {
             System.out.println("Please enter a valid number of months (1-12)");
+        }
+    }
+
+    public static void getMultiplicationTable(){
+
+        int result = 1;
+
+        for (int num = 1; num <= 10; num++){
+            for (int multiplicat = 1; multiplicat <= 10; multiplicat++){
+                result = num * multiplicat;
+                System.out.println(num + " * " + multiplicat + " = " + result);
+            }
         }
     }
 }
