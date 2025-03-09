@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getSquareNumbers();
+        getSequenceFibonacci();
     }
 
     public static void getNameSeasonSwitch(){
@@ -61,7 +61,7 @@ public class HomeWork {
         if (number % 2 == 0){
             System.out.println(number + " - even number");
         } else {
-            System.out.println(number + " not even number");
+            System.out.println(number + " - not even number");
         }
     }
 
@@ -168,6 +168,19 @@ public class HomeWork {
 
         for (int num = 10; num <= 20; num++){
             System.out.print(num * num + " ");
+        }
+    }
+
+    public static void getSequenceFibonacci(){
+
+        int a = 0;
+        int b = 1;
+
+        for (int num = 0; num < 11; num++){
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
         }
     }
 }
