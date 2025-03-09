@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getNumberDecrement();
+        getSumOfNumbers();
     }
 
     public static void getNameSeasonSwitch(){
@@ -115,5 +115,20 @@ public class HomeWork {
         for (int num = 5; num >= 1; num--){
             System.out.print(" " + num);
         }
+    }
+
+    public static void getSumOfNumbers(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please, enter positive number for get sum of numbers: ");
+        int number = input.nextInt();
+
+        int sum = 0;
+
+        for (int num = 1; num <= number; num++){
+            sum += num;
+            System.out.print(num + " ");
+        }
+
+        System.out.println("Sum of numbers = " + sum);
     }
 }
