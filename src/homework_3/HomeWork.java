@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] args){
     // Methods
-        getSequenceFibonacci();
+        getSumPercent();
     }
 
     public static void getNameSeasonSwitch(){
@@ -173,14 +173,36 @@ public class HomeWork {
 
     public static void getSequenceFibonacci(){
 
-        int a = 0;
-        int b = 1;
+        int numfirst = 0;
+        int numsecond = 1;
 
         for (int num = 0; num < 11; num++){
-            System.out.print(a + " ");
-            int next = a + b;
-            a = b;
-            b = next;
+            System.out.print(numfirst + " ");
+            int numnext = numfirst + numsecond;
+            numfirst = numsecond;
+            numsecond = numnext;
+        }
+    }
+
+    public static void getSumPercent(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please, enter the amount you want to invest: ");
+
+        float sum = input.nextFloat();
+
+        System.out.print("Please, enter for how many months: ");
+
+        int months = input.nextInt();
+        float finalSum = sum;
+        float monthRate = 0.07f;
+
+        if (months <= 12 && months != 0){
+            for (int num = 0; num < months; num++){
+                finalSum += finalSum * monthRate;
+            }
+            System.out.println("Your sum for " + months + " months = " + finalSum);
+        } else {
+            System.out.println("Please enter a valid number of months (1-12)");
         }
     }
 }
