@@ -9,7 +9,6 @@ public class HomeWorkArrays {
         //foundNumInArray();
         //randomArray();
         //compareAvgValueArrays();
-        createSomeArray();
     }
 
     public static void foundNumInArray(){
@@ -121,31 +120,9 @@ public class HomeWorkArrays {
         } else System.out.println(avgSecond + " < " + avgFirst);
     }
 
-    public static void createSomeArray(){
-
-        System.out.println("Please, enter the size of array (5-10): ");
-
-        int sizeArray = input().nextInt();
-        int[] array = new int[sizeArray];
-
-        if (sizeArray > 5 && sizeArray <= 10){
-
-            for (int index = 0; index < sizeArray; index++){
-                array[index] = (int) (Math.random() * 101);
-
-            }
-            for (int nums: array){
-                System.out.print(nums + " ");
-            }
-
-        }else {
-            System.out.println("Out of size array");
-            System.out.println("Please, enter a size of array (6-10): ");
-        }
 
 
 
-    }
 
     public static Scanner input(){
         return new Scanner(System.in);
