@@ -8,7 +8,8 @@ public class HomeWorkArrays {
         // Methods
         //foundNumInArray();
         //randomArray();
-        compareAvgValueArrays();
+        //compareAvgValueArrays();
+        createSomeArray();
     }
 
     public static void foundNumInArray(){
@@ -31,6 +32,8 @@ public class HomeWorkArrays {
             System.out.println("Number " + numArray + " is in the array");
         } else System.out.println("Number " + numArray + " is not in the array");
     }
+
+
 
     public static void randomArray(){
 
@@ -116,6 +119,32 @@ public class HomeWorkArrays {
         if (avgFirst < avgSecond){
             System.out.println(avgSecond + " > " + avgFirst);
         } else System.out.println(avgSecond + " < " + avgFirst);
+    }
+
+    public static void createSomeArray(){
+
+        System.out.println("Please, enter the size of array (5-10): ");
+
+        int sizeArray = input().nextInt();
+        int[] array = new int[sizeArray];
+
+        if (sizeArray > 5 && sizeArray <= 10){
+
+            for (int index = 0; index < sizeArray; index++){
+                array[index] = (int) (Math.random() * 101);
+
+            }
+            for (int nums: array){
+                System.out.print(nums + " ");
+            }
+
+        }else {
+            System.out.println("Out of size array");
+            System.out.println("Please, enter a size of array (6-10): ");
+        }
+
+
+
     }
 
     public static Scanner input(){
