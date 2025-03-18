@@ -7,8 +7,10 @@ public class HomeWorkArrays {
 
         // Methods
         //foundNumInArray();
+        //deleteNumInArray();
         //randomArray();
-        //compareAvgValueArrays();
+        //randomArray();
+        compareAvgValueArrays();
     }
 
     public static void foundNumInArray(){
@@ -20,8 +22,8 @@ public class HomeWorkArrays {
 
         int numArray = input().nextInt();
 
-        for (int index = 0; index < nums.length; index++) {
-            if (nums[index] == numArray) {
+        for (int num : nums) {
+            if (num == numArray) {
                 found = true;
                 break;
             }
@@ -32,7 +34,40 @@ public class HomeWorkArrays {
         } else System.out.println("Number " + numArray + " is not in the array");
     }
 
+    public static void deleteNumInArray(){
 
+        int[] numbers = new int[]{1, 8, 9, 10, 1, 2};
+
+        System.out.println("Please, enter the number for delete him in array: ");
+        int checkNum = input().nextInt();
+
+        int counter = 0;
+
+        for (int number : numbers) {
+            if (number == checkNum) {
+                counter += 1;
+            }
+        }
+
+        if (counter == 0){
+            System.out.println("We couldn't find any matches in the array. There is no need for changes.");
+            showArray(numbers);
+        } else {
+            if (counter < numbers.length){
+                int[] newArray = new int[numbers.length - counter];
+
+                for (int index = 0, newIndex = 0; index < numbers.length; index++){
+                    if (numbers[index] != checkNum){
+                        newArray[newIndex] = numbers[index];
+                        newIndex++;
+                    }
+                }
+
+                showArray(newArray);
+            }
+        }
+
+    }
 
     public static void randomArray(){
 
@@ -46,9 +81,9 @@ public class HomeWorkArrays {
         }
 
         System.out.println("Random array: ");
-        for (int num: randomNumbers){
-            System.out.print(num + " ");
-        }
+
+        showArray(randomNumbers);
+
         System.out.println();
 
         int max = randomNumbers[0];
@@ -88,15 +123,11 @@ public class HomeWorkArrays {
         }
 
         System.out.println("First array: ");
-        for (int num: firstArray){
-            System.out.print(num + " ");
-        }
+        showArray(firstArray);
         System.out.println();
 
         System.out.println("Second array: ");
-        for (int num: secondArray){
-            System.out.print(num + " ");
-        }
+        showArray(secondArray);
         System.out.println();
 
         double sumFirstArray = 0;
@@ -123,6 +154,11 @@ public class HomeWorkArrays {
 
 
 
+    public static void showArray(int[] numbers){
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+    }
 
     public static Scanner input(){
         return new Scanner(System.in);
