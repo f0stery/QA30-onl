@@ -1,5 +1,6 @@
 package homework_4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HomeWorkArrays {
@@ -8,12 +9,12 @@ public class HomeWorkArrays {
         // Methods
         //foundNumInArray();
         //deleteNumInArray();
-        //randomArray();
-        //randomArray();
+        //getMaxMinMidValues();
         //compareAvgValueArrays();
         //getArrayEvenValues();
         //setZeroNotEvenIndexValues();
-
+        //sortArrayWithNames();
+        bumbleMethod();
     }
 
     public static void foundNumInArray(){
@@ -75,7 +76,7 @@ public class HomeWorkArrays {
 
     }
 
-    public static void randomArray(){
+    public static void getMaxMinMidValues(){
 
         System.out.println("Please enter a array size: ");
         int length = input().nextInt();
@@ -229,7 +230,44 @@ public class HomeWorkArrays {
         System.out.println();
     }
 
+    public static void sortArrayWithNames(){
+        String[] names = new String[] {
+                "Evgeny", "Tatiana", "Svetlana",
+                "Alex", "Elizabet", "Daria",
+                "Gennadiy", "Stanislav", "Vadim"
+        };
+        Arrays.sort(names);
 
+        System.out.println("Sorted array:\n" + Arrays.toString(names));
+    }
+
+    public static void bumbleMethod(){
+
+        int[] num = new int[] {2, 4, 3, 0, 1, 10, 5, 4, 2, 10};
+        boolean swapped;
+
+        System.out.println("Original array: ");
+        showArray(num);
+
+        int number;
+
+        for (int i = 0; i < num.length; i++){
+            swapped = false;
+
+            for (int j = 0; j < num.length; j++){
+                if (num[j] > num[j + 1]){
+                    number = num[j];
+                    num[j] = num[j + 1];
+                    num[j + 1] = number;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+        showArray(num);
+    }
 
     public static void showArray(int[] numbers){
         for (int number : numbers) {
