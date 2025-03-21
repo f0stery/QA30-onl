@@ -10,7 +10,10 @@ public class HomeWorkArrays {
         //deleteNumInArray();
         //randomArray();
         //randomArray();
-        compareAvgValueArrays();
+        //compareAvgValueArrays();
+        //getArrayEvenValues();
+        //setZeroNotEvenIndexValues();
+
     }
 
     public static void foundNumInArray(){
@@ -38,7 +41,10 @@ public class HomeWorkArrays {
 
         int[] numbers = new int[]{1, 8, 9, 10, 1, 2};
 
-        System.out.println("Please, enter the number for delete him in array: ");
+        System.out.print("Array: ");
+        showArray(numbers);
+        System.out.println();
+        System.out.print("Please, enter the number for delete him in array: ");
         int checkNum = input().nextInt();
 
         int counter = 0;
@@ -62,7 +68,7 @@ public class HomeWorkArrays {
                         newIndex++;
                     }
                 }
-
+                System.out.println("New Array: ");
                 showArray(newArray);
             }
         }
@@ -151,6 +157,77 @@ public class HomeWorkArrays {
         } else System.out.println(avgSecond + " < " + avgFirst);
     }
 
+    // additional tasks
+
+    public static void getArrayEvenValues() {
+
+        Scanner scanner = input();
+        int sizeArray;
+
+        while (true) {
+            System.out.print("Please, enter a size for create array (6 - 10): ");
+            sizeArray = scanner.nextInt();
+
+            if (sizeArray <= 10 && sizeArray > 5) {
+                break;
+            } else {
+                System.out.println("Incorrect size. Please enter correct size (6-10): ");
+            }
+        }
+
+        int[] randomArray = new int[sizeArray];
+
+
+        for (int index = 0; index < randomArray.length; index++) {
+            randomArray[index] = (int) (Math.random() * 101);
+        }
+        System.out.println("Array:");
+        showArray(randomArray);
+
+        int counter = 0;
+        for (int j : randomArray) {
+            if (j % 2 == 0 && j != 0) {
+                counter += 1;
+            }
+        }
+        int[] evenValues = new int[counter];
+        int newIndex = 0;
+
+        for (int i : randomArray) {
+            if (i % 2 == 0 && i != 0) {
+                evenValues[newIndex] = i;
+                newIndex++;
+            }
+        }
+
+        System.out.println();
+        System.out.println("New array:");
+        showArray(evenValues);
+    }
+
+    public static void setZeroNotEvenIndexValues(){
+
+        System.out.print("Please, enter array size: ");
+        int size = input().nextInt();
+
+        int[] array = new int[size];
+
+        for (int index = 0; index < array.length; index++){
+            array[index] = (int) (Math.random() * 101);
+        }
+
+        System.out.println("Original array: ");
+        showArray(array);
+
+
+        for (int index = 1; index < array.length; index += 2){
+            array[index] = 0;
+        }
+        System.out.println("New array: ");
+        showArray(array);
+
+        System.out.println();
+    }
 
 
 
@@ -158,6 +235,7 @@ public class HomeWorkArrays {
         for (int number : numbers) {
             System.out.print(number + " ");
         }
+        System.out.println();
     }
 
     public static Scanner input(){
