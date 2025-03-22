@@ -14,7 +14,7 @@ public class HomeWorkArrays {
         //getArrayEvenValues();
         //setZeroNotEvenIndexValues();
         //sortArrayWithNames();
-        bumbleMethod();
+        bumbleSort();
     }
 
     public static void foundNumInArray(){
@@ -241,22 +241,20 @@ public class HomeWorkArrays {
         System.out.println("Sorted array:\n" + Arrays.toString(names));
     }
 
-    public static void bumbleMethod(){
+    public static void bumbleSort(){
 
-        int[] num = new int[] {2, 4, 3, 0, 1, 10, 5, 4, 2, 10};
+        int[] num = new int[] {2, 3, 4, 1, 10, 2, 4, 44, 22, 100};
         boolean swapped;
 
         System.out.println("Original array: ");
         showArray(num);
 
-        int number;
-
-        for (int i = 0; i < num.length; i++){
+        for (int i = 0; i < num.length - 1; i++){
             swapped = false;
 
-            for (int j = 0; j < num.length; j++){
+            for (int j = 0; j < num.length - 1; j++){
                 if (num[j] > num[j + 1]){
-                    number = num[j];
+                    int number = num[j];
                     num[j] = num[j + 1];
                     num[j + 1] = number;
                     swapped = true;
@@ -266,6 +264,7 @@ public class HomeWorkArrays {
                 break;
             }
         }
+        System.out.println("Sorted array: ");
         showArray(num);
     }
 
