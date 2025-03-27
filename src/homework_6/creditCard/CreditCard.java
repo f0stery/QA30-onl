@@ -24,7 +24,7 @@ public class CreditCard {
             return;
         }
         if (amount > balance) {
-            System.out.println("Error: Insufficient funds on card " + accountNumber);
+            System.out.println("Error: Insufficient money on card " + accountNumber);
             return;
         }
         balance -= amount;
@@ -33,6 +33,6 @@ public class CreditCard {
 
     @Override
     public String toString() {
-        return "Card " + accountNumber + " | Balance: " + balance;
+        return "Card " + this.accountNumber + " | Balance: " + this.balance;
     }
 }
