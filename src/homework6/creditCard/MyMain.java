@@ -1,4 +1,4 @@
-package homework6;
+package homework6.creditCard;
 
 public class MyMain {
     public static void main(String[] args) {

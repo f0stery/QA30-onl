@@ -1,4 +1,4 @@
-package homework6;
+package homework6.creditCard;
 
 public class CreditCard {
     private final long accountNumber;
