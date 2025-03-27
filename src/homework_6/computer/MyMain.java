@@ -1,4 +1,4 @@
-package homework6.computer;
+package homework_6.computer;
 
 public class MyMain {
     public static void main(String[] args){
