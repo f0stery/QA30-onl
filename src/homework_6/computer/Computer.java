@@ -2,10 +2,10 @@ package homework_6.computer;
 
 public class Computer {
 
-    private double price;
-    private String model;
-    private RAM ram;
-    private HDD hdd;
+    private final double price;
+    private final String model;
+    private final RAM ram;
+    private final HDD hdd;
 
 
     public Computer(double price, String model) {
