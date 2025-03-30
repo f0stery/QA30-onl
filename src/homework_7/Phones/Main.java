@@ -1,4 +1,4 @@
-package homework_7;
+package homework_7.Phones;
 
 public class Main {
     public static void main(String[] args){
