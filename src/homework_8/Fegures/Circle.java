@@ -1,4 +1,4 @@
-package homework_8;
+package homework_8.Fegures;
 
 public class Circle extends Shape {
 
@@ -18,4 +18,10 @@ public class Circle extends Shape {
         return 2 * Math.PI * radius;
     }
 
+    @Override
+    public String toString() {
+        return "Circle with radius: " + radius +
+                ", area: " + calculateArea() +
+                ", perimeter: " + calculatePerimeter();
+    }
 }

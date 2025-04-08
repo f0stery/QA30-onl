@@ -1,4 +1,4 @@
-package homework_8;
+package homework_8.Fegures;
 
 public class Rectangle extends Shape {
 
@@ -22,5 +22,11 @@ public class Rectangle extends Shape {
         return height * weight;
     }
 
-
+    @Override
+    public String toString() {
+        return "Rectangle with height: " + height +
+                ", width: " + weight +
+                ", area: " + calculateArea() +
+                ", perimeter: " + calculatePerimeter();
+    }
 }

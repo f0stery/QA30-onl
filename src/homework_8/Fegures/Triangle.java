@@ -1,4 +1,4 @@
-package homework_8;
+package homework_8.Fegures;
 
 
 public class Triangle extends Shape {
@@ -21,5 +21,12 @@ public class Triangle extends Shape {
     @Override
     public double calculatePerimeter() {
         return a + b + c;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle with sides: " + a + ", " + b + ", " + c +
+                ", area: " + calculateArea() +
+                ", perimeter: " + calculatePerimeter();
     }
 }

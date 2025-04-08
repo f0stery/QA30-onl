@@ -1,6 +1,4 @@
-package homework_8;
-
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+package homework_8.Fegures;
 
 public class Main {
     public static void main(String[] args){
@@ -19,6 +17,6 @@ public class Main {
             totalPerimeter += shape.calculatePerimeter();
         }
 
-        System.out.println("Сумма периметров всех фигур: " + totalPerimeter);
+        System.out.println("Sum of perimeters all of shapes: " + totalPerimeter);
     }
 }
