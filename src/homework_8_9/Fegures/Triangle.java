@@ -1,4 +1,4 @@
-package homework_8.Fegures;
+package homework_8_9.Fegures;
 
 
 public class Triangle extends Shape {

@@ -1,4 +1,4 @@
-package homework_8.Jobs;
+package homework_8_9.Jobs;
 
 public class Director implements Position{
 
