@@ -1,5 +1,9 @@
 package homework_8_9.documents;
 
+import homework_8_9.documents.exceptions.ABCSequenceException;
+import homework_8_9.documents.exceptions.EndsWith1a2bException;
+import homework_8_9.documents.exceptions.StartsWith555Exception;
+
 import java.util.Date;
 
 public class FinancialInvoice extends Document {
@@ -7,7 +11,7 @@ public class FinancialInvoice extends Document {
     private String departmentCode;
 
     protected FinancialInvoice(String documentNumber, Date documentDate,
-                               double totalAmount, String departmentCode) {
+                               double totalAmount, String departmentCode) throws ABCSequenceException, StartsWith555Exception, EndsWith1a2bException {
         super(documentNumber, documentDate);
         this.totalAmount = totalAmount;
         this.departmentCode = departmentCode;

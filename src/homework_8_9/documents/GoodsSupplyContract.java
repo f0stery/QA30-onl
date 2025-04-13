@@ -1,5 +1,9 @@
 package homework_8_9.documents;
 
+import homework_8_9.documents.exceptions.ABCSequenceException;
+import homework_8_9.documents.exceptions.EndsWith1a2bException;
+import homework_8_9.documents.exceptions.StartsWith555Exception;
+
 import java.util.Date;
 
 public class GoodsSupplyContract extends Document {
@@ -9,7 +13,8 @@ public class GoodsSupplyContract extends Document {
 
 
     protected GoodsSupplyContract(String documentNumber, Date dateDocument,
-                                  String goodsType, int goodsQuantity) {
+                                  String goodsType, int goodsQuantity) throws ABCSequenceException,
+            StartsWith555Exception, EndsWith1a2bException {
         super(documentNumber, dateDocument);
         this.goodsType = goodsType;
         this.goodsQuantity = goodsQuantity;

@@ -1,5 +1,9 @@
 package homework_8_9.documents;
 
+import homework_8_9.documents.exceptions.ABCSequenceException;
+import homework_8_9.documents.exceptions.EndsWith1a2bException;
+import homework_8_9.documents.exceptions.StartsWith555Exception;
+
 import java.util.Date;
 
 public class EmployeeContract extends Document {
@@ -7,7 +11,7 @@ public class EmployeeContract extends Document {
     private String employeeName;
 
     protected EmployeeContract(String documentNumber, Date documentDate,
-                               Date contractEndDate, String employeeName) {
+                               Date contractEndDate, String employeeName) throws ABCSequenceException, StartsWith555Exception, EndsWith1a2bException {
         super(documentNumber, documentDate);
         this.contractEndDate = contractEndDate;
         this.employeeName = employeeName;
